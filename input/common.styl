@@ -1,0 +1,548 @@
+@import "reset.css";
+
+
+.public-header
+    position relative
+    height 100px
+    @media(max-width 767px)
+        height 50px
+    .brand
+        height 100%
+        font-size 0
+        i
+            display inline-block
+            width 0
+            height 100%
+        img
+        i
+            vertical-align middle
+        img
+            @media(max-width 767px)
+                height 40px
+    .clear
+        height 100%
+        @media(max-width 1199px)
+            width 100%
+            padding 20px 0 30px
+            display flex
+            justify-content center
+            align-items center
+            flex-direction column
+            height auto 
+    .mobile-menu
+        height 100%
+        left 0
+        right 0
+        width 100%
+        background #ffffff
+        z-index 10
+        @media(max-width 1199px)
+            position absolute
+            height auto
+            left -15px
+            right -15px
+            padding 0 15px
+            display none
+    .moblie-toggle
+        height 100%
+        width 50px
+        font-size 0
+        text-align center
+        display none
+        cursor pointer
+        @media(max-width 1199px)
+            display block
+        @media(max-width 767px)
+            padding 0 10px
+            box-sizing border-box
+        i
+        span
+            display inline-block
+            vertical-align middle
+        &.active
+            span
+                background rgba(0,0,0,0)
+                &:after
+                    top 0
+                    transform rotateZ(45deg)
+                    transition top 0.3s,bottom 0.3s,transform 0.3s 0.3s
+                &:before
+                    bottom 0
+                    transform rotateZ(-45deg)
+                    transition top 0.3s,bottom 0.3s,transform 0.3s 0.3s
+        span
+            position relative
+            width 100%
+            height 2px
+            background #856b36
+            cursor pointer
+            transition 0.3s
+            &:before
+            &:after
+                content ''
+                position absolute
+                left 0
+                right 0
+                height 2px
+                width 100%
+                background #856b36
+                transition 0.3s
+            &:after
+                top -20px
+                transition top 0.3s 0.3s,bottom 0.3s 0.3s,transform 0.3s
+                @media(max-width 767px)
+                    top -13px
+            &:before
+                bottom -20px
+                transition top 0.3s 0.3s,bottom 0.3s 0.3s,transform 0.3s
+                @media(max-width 767px)
+                    bottom -13px
+                
+        i
+            width 0
+            height 100%
+    .menu
+        height 100%
+        .nav
+            font-size 18px
+            color #1d2741
+            line-height 100px
+            @media(max-width 1199px)
+                float none
+                line-height 50px
+            .item
+                position relative
+                @media(max-width 1199px)
+                    float none
+            a
+                display block
+                padding 0 20px
+                transition 0.3s
+                &:hover
+                    color #ffffff
+                    background #ac915b
+                &.active
+                    color #ac915b
+                &.on
+                    .iconfont
+                        display inline-block
+                        transform rotate(180deg)
+            .child-menu
+                display none
+                position absolute
+                top 100px
+                background #ffffff
+                z-index 10
+                @media(max-width 1199px)
+                    position static
+                    padding 0 15px
+                .item
+                    min-width 160px
+                    height 45px
+                    a
+                        font-size 14px
+                        padding 0 15px
+                        line-height 45px
+
+        .login-other
+            padding-left 50px
+            font-size 0
+            height 100%
+            @media(max-width 1199px)
+                padding-left 0
+                padding-right 30px
+                padding 0
+            a
+            i
+                display inline-block
+                vertical-align middle
+            i
+                width 0
+                height 100%
+            a
+                margin-left 10px
+                width 28px
+                height 28px
+                border-radius 50%
+                text-align center
+                line-height 28px
+                font-size 18px
+                color #ffffff
+                background #cccccc
+                transition 0.3s
+                @media(max-width 1199px)
+                    margin 0 20px
+                &:hover
+                    background #ac915b
+        .login-register
+            margin-left 20px
+            font-size 0
+            height 100%
+            text-align right
+            position relative
+            @media(max-width 1199px)
+                margin-left 0
+                margin-top 20px
+            &:after
+                content ''
+                position absolute
+                left 50%
+                height 14px
+                top 50%
+                margin-top -7px
+                background #ded3bd
+                width 1px
+            a
+            i
+                display inline-block
+                vertical-align middle
+            i
+                width 0
+                height 100%
+            a
+                font-size 16px
+                color #333333
+                transition 0.3s
+                @media(max-width 1199px)
+                    margin 0 20px
+                &:hover
+                    color #ac915b
+                &+a
+                    margin-left 30px
+
+
+
+.public-footer
+    background #111523
+    .news
+        padding 40px 0 60px
+        width 100%
+        margin 0 auto
+        box-sizing border-box
+        @media(max-width 767px)
+            padding-bottom 0
+        h3
+            padding-bottom 15px
+            font-size 16px
+            color #c39c4a
+            line-height 30px
+            font-weight normal
+        .item
+            padding 15px 0
+            font-size 12px
+            line-height 20px
+            color #856b36
+            border-bottom 1px dashed #856b36
+            a
+                transition 0.3s
+                &:hover
+                    color #ffffff
+    .about
+        padding 45px 0
+        width 100%
+        margin 0 auto
+        // @media(max-width 767px)
+        //     width 100%
+        .contact
+            padding-bottom 25px
+            font-size 16px
+            color #c39c4a
+            line-height 26px
+            @media(max-width 767px)
+                display flex
+                flex-wrap wrap
+                text-align center
+            a
+                position relative
+                transition 0.3s
+                @media(max-width 767px)
+                    flex 0 0 50%
+                &+a
+                    margin-left 46px
+                    @media(max-width 767px)
+                        margin-left 0
+                    &:after
+                        position absolute
+                        content ""
+                        left -23px
+                        width 1px
+                        top 5px
+                        bottom 5px
+                        background #4f4739
+                        @media(max-width 767px)
+                            display none
+                &:hover
+                    text-decoration underline
+        h3
+            font-size 14px
+            color #ffffff
+            line-height 1
+        p
+            padding-top 16px
+            font-size 14px
+            color #999999
+            line-height 1.5
+            span+span
+                padding-left 10px
+            &.copy-right
+                padding-top 20px
+                color #666666
+            &.pt0
+                padding-top 0
+
+
+
+.main-banner
+    .layout
+        a
+        img
+            display block
+            margin 0 auto
+        img
+            @media(max-width 767px)
+                height 500px
+    .swiper-pagination-bullet
+        opacity 0.6
+        background #ffffff
+        transition 0.3s
+        border-radius 4px
+    .swiper-pagination-bullet-active
+        width 42px
+        opacity 1
+    .content
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        color #ffffff
+        line-height 1.5
+    .first-pages
+        text-align center
+        h3
+            padding-top 140px
+            font-size 32px
+            @media(max-width 767px)
+                padding-top 100px
+        h4
+            font-size 22px
+        h2
+            padding-top 50px
+            font-size 42px
+            @media(max-width 767px)
+                font-size 36px
+    .second-pages
+        .maw428
+            max-width 428px
+            width 100%
+            float right
+            text-align center
+            @media(max-width 767px)
+                float none
+                margin 0 auto
+        h2
+            padding-top 95px
+            font-size 36px
+            @media(max-width 767px)
+                padding-top 50px
+        h3
+            padding 5px 0 60px
+            font-size 24px
+        .pic
+            .item
+                width 46%
+                height 100px
+                background url('') center center no-repeat
+                background-size 90% auto
+                
+    .third-pages
+        h2
+            padding-top 70px
+            font-size 36px
+            // @media(max-width 767px)
+            //     padding-top 20px
+            //     text-align center
+        .pic
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%,-50%)
+            // @media(max-width 767px)
+            //     position static
+            //     transform translate(0,0)
+            //     max-width 500px
+            //     width 80%
+            //     margin 0 auto
+            max-width 500px
+            width 80%
+            img
+                display block
+                margin 0 auto
+                width 100%
+                // @media(max-width 767px)
+                
+
+
+.main-sub-title
+    height 160px
+    font-size 0
+    background url('../img/2ef3ec1c9643fe5c98deccdf2b169981-1560+160.jpg') center top no-repeat
+    text-align center
+    h2
+        font-size 24px
+        color #ffffff
+        line-height 2
+    h2
+    i
+        display inline-block
+        vertical-align middle
+    i
+        width 0
+        height 100%
+
+.main-title
+    font-size 36px
+    color #1d2741
+    text-align center
+    line-height 1.5
+    &.pt70
+        padding-top 70px
+    &.pt140
+        padding-top 140px
+    &.pb50
+        padding-bottom 50px
+    .sub-title
+        display block
+        font-size 14px
+        color #9b7f47
+        text-transform uppercase
+
+.main-profile
+    .pic
+        img
+            display block
+            width 450px
+            height 450px
+            border-radius 0 30px 0 30px
+            @media(max-width 1199px)
+                width 100%
+                height 390px
+            @media(max-width 991px)
+                height auto
+                max-width 400px
+                margin 0 auto
+    .content
+        height 450px
+        font-size 0
+        box-sizing border-box
+        border-top 1px solid #ded3bd
+        border-bottom 1px solid #ded3bd
+        @media(max-width 1199px)
+            width 100%
+            height 390px
+        @media(max-width 991px)
+            height auto 
+            padding 50px 0
+        .vam>*
+            width 90%
+            max-width 470px
+            margin 0 auto
+            @media(max-width 767px)
+                width 100%
+        .vam
+            width 100%
+        .vam
+        i
+            display inline-block
+            vertical-align middle
+        i
+            width 0
+            height 100%
+        h3
+            padding-bottom 50px
+            font-size 24px
+            color #ac915b
+            line-height 1.5
+            text-align center
+            @media(max-width 767px)
+                padding-bottom 20px
+        p
+            font-size 14px
+            color #1d2741
+            line-height 22px
+            padding-top 10px
+            text-indent 2em
+
+.main-server
+    .item
+        max-width 340px
+        @media(max-width 767px)
+            float none
+            margin 0 auto
+    .content
+        position relative
+        background #fbfbfb
+        padding 0 30px 35px
+        &:after
+            content ''
+            position absolute
+            top -30px
+            left 0
+            right 0
+            height 30px
+            background-color #fbfbfb
+    .pic
+        position relative
+        z-index 1
+        width 110px
+        height 110px
+        box-sizing border-box
+        background #1f2741 url('') center center no-repeat
+        border 6px solid #ac915b
+        border-radius 50%
+        margin 0 auto 
+    h3
+        padding 15px 0
+        font-size 18px
+        color #1f2741
+        line-height 30px
+        text-align center
+    p
+        font-size 14px
+        color #999999
+        line-height 20px
+        text-align center
+    a
+        display block
+        width 100px
+        height 35px
+        margin 35px auto 0
+        font-size 14px
+        color #ac915b
+        border 1px solid #ac915b
+        text-align center
+        line-height 35px
+        transition 0.3s
+        &:hover
+            background #ac915b
+            color #ffffff
+.main-brand-list
+    padding-bottom 90px
+    .pic
+        display block
+        width 250px
+        height 70px
+        margin 0 auto 15px
+        background  url('') center center no-repeat
+        border 1px solid transparent
+        transition 0.3s
+        @media(max-width 1199px)
+            float none
+        @media(max-width 767px)
+            width 100%
+        @media(max-width 600px)
+            background-size 80% auto
+        &:hover
+            border-color #ac915b
+            
+        
