@@ -388,10 +388,16 @@
     font-size 0
     background url('../img/2ef3ec1c9643fe5c98deccdf2b169981-1560+160.jpg') center top no-repeat
     text-align center
+    @media(max-width 767px)
+        height 130px
     h2
         font-size 24px
         color #ffffff
         line-height 2
+        @media(max-width 767px)
+            font-size 20px
+            width 80%
+            margin 0 auto
     h2
     i
         display inline-block
@@ -474,6 +480,9 @@
             text-indent 2em
 
 .main-server
+    .col-sm-4+.col-sm-4
+        @media(max-width 767px)
+            margin-top 30px
     .item
         max-width 340px
         @media(max-width 767px)

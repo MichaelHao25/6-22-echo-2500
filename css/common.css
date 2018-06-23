@@ -511,10 +511,22 @@
   background: url("../img/2ef3ec1c9643fe5c98deccdf2b169981-1560+160.jpg") center top no-repeat;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .main-sub-title {
+    height: 130px;
+  }
+}
 .main-sub-title h2 {
   font-size: 24px;
   color: #fff;
   line-height: 2;
+}
+@media (max-width: 767px) {
+  .main-sub-title h2 {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .main-sub-title h2,
 .main-sub-title i {
@@ -624,6 +636,11 @@
   line-height: 22px;
   padding-top: 10px;
   text-indent: 2em;
+}
+@media (max-width: 767px) {
+  .main-server .col-sm-4+.col-sm-4 {
+    margin-top: 30px;
+  }
 }
 .main-server .item {
   max-width: 340px;
