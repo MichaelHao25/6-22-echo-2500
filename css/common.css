@@ -509,7 +509,7 @@
 .main-sub-title {
   height: 160px;
   font-size: 0;
-  background: url("../img/2ef3ec1c9643fe5c98deccdf2b169981-1560+160.jpg") center top no-repeat;
+  background: url("../img/2ef3ec1c9643fe5c98deccdf2b169981-1560+160.jpg") center top/cover no-repeat;
   text-align: center;
 }
 @media (max-width: 767px) {
