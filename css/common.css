@@ -189,6 +189,8 @@
   display: none;
   position: absolute;
   top: 100px;
+  left: 0;
+  right: 0;
   background: #fff;
   z-index: 10;
 }
@@ -199,7 +201,6 @@
   }
 }
 .public-header .menu .nav .child-menu .item {
-  min-width: 160px;
   height: 45px;
 }
 .public-header .menu .nav .child-menu .item a {
@@ -644,29 +645,28 @@
 }
 .main-server .item {
   max-width: 340px;
+  position: relative;
+  margin-top: 100px;
 }
 @media (max-width: 767px) {
   .main-server .item {
     float: none;
-    margin: 0 auto;
+    margin: 100px auto 0;
   }
 }
 .main-server .content {
   position: relative;
   background: #fbfbfb;
-  padding: 0 30px 35px;
+  padding: 30px 30px 35px;
+  transition: 0.3s;
 }
-.main-server .content:after {
-  content: '';
-  position: absolute;
-  top: -30px;
-  left: 0;
-  right: 0;
-  height: 30px;
-  background-color: #fbfbfb;
+.main-server .content:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 .main-server .pic {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: -85px;
   z-index: 1;
   width: 110px;
   height: 110px;
@@ -674,7 +674,7 @@
   background: #1f2741 url("") center center no-repeat;
   border: 6px solid #ac915b;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 0 0 0 -55px;
 }
 .main-server h3 {
   padding: 15px 0;

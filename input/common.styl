@@ -131,13 +131,14 @@
                 display none
                 position absolute
                 top 100px
+                left 0
+                right 0
                 background #ffffff
                 z-index 10
                 @media(max-width 1199px)
                     position static
                     padding 0 15px
                 .item
-                    min-width 160px
                     height 45px
                     a
                         font-size 14px
@@ -485,23 +486,22 @@
             margin-top 30px
     .item
         max-width 340px
+        position relative
+        margin-top 100px
         @media(max-width 767px)
             float none
-            margin 0 auto
+            margin 100px auto 0
     .content
         position relative
         background #fbfbfb
-        padding 0 30px 35px
-        &:after
-            content ''
-            position absolute
-            top -30px
-            left 0
-            right 0
-            height 30px
-            background-color #fbfbfb
+        padding 30px 30px 35px
+        transition 0.3s
+        &:hover
+            box-shadow 0 0 10px rgba(#000,0.3)
     .pic
-        position relative
+        position absolute
+        left 50%
+        top -85px
         z-index 1
         width 110px
         height 110px
@@ -509,7 +509,7 @@
         background #1f2741 url('') center center no-repeat
         border 6px solid #ac915b
         border-radius 50%
-        margin 0 auto 
+        margin 0 0 0 -55px
     h3
         padding 15px 0
         font-size 18px

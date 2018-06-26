@@ -185,7 +185,7 @@
 					<div class="swiper-slide">
 						<div class="layout">
 							<a href="#">
-								<img src="img/67c90da46c3b8691a77ba5845fbafb8b-1560+568.jpg" alt="">
+								<img src="img/965bed3737d98f15b88bb6abbece4c8b-1560+570.jpg" alt="">
 							</a>
 						</div>
 						<div class="content third-pages">
@@ -352,6 +352,8 @@
 		var mySwiper = new Swiper('.main-banner .swiper-container', {
 			pagination: '.main-banner .swiper-pagination',
 			effect: 'fade',
+			autoplay:3000,
+			paginationClickable :true,
 			onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
 				swiperAnimateCache(swiper); //隐藏动画元素 
 				swiperAnimate(swiper); //初始化完成开始动画
