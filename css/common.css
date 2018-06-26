@@ -408,11 +408,7 @@
 .main-banner .layout img {
   display: block;
   margin: 0 auto;
-}
-@media (max-width: 767px) {
-  .main-banner .layout img {
-    height: 500px;
-  }
+  width: 100%;
 }
 .main-banner .swiper-pagination-bullet {
   opacity: 0.6;
@@ -629,6 +625,7 @@
 @media (max-width: 767px) {
   .main-profile .content h3 {
     padding-bottom: 20px;
+    font-size: 20px;
   }
 }
 .main-profile .content p {
@@ -637,6 +634,7 @@
   line-height: 22px;
   padding-top: 10px;
   text-indent: 2em;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .main-server .col-sm-4+.col-sm-4 {
