@@ -1,5 +1,13 @@
 @import "reset.css";
 
+.fixed-menu
+    position fixed
+    top 0
+    left 0
+    right 0
+    background #ffffff
+    z-index 1
+
 
 .public-header
     position relative
@@ -140,6 +148,7 @@
                     padding 0 15px
                 .item
                     height 45px
+                    width 100%
                     a
                         font-size 14px
                         padding 0 15px
@@ -293,7 +302,17 @@
 
 
 
+.main
+    padding-top 100px
 .main-banner
+    .no-js-banner
+        height 120px
+        background url('') center center/100% 100% no-repeat
+        h3
+            font-size 32px
+            color #ffffff
+            text-align center
+            line-height 120px
     .layout
         a
         img
@@ -423,6 +442,10 @@
         padding-top 140px
     &.pb50
         padding-bottom 50px
+    &.pt100
+        padding-top 100px
+    &.pb60
+        padding-bottom 60px
     .sub-title
         display block
         font-size 14px
@@ -430,6 +453,37 @@
         text-transform uppercase
 
 .main-profile
+    &.style-2
+        .row
+            margin-top 40px
+        .pic
+            img
+                height 380px
+                @media(max-width 1199px)
+                    width 100%
+                    height 380px
+                @media(max-width 991px)
+                    height auto
+                    max-width 400px
+                    margin 0 auto
+                @media(max-width 767px)
+                    width 70%
+                    min-width 200px
+        .content
+            height 380px
+        .content
+            @media(max-width 1199px)
+                width 100%
+                height 380px
+            @media(max-width 991px)
+                height auto 
+                padding 50px 0
+            @media(max-width 767px)
+                border-top none
+            h3
+            p
+                text-align left
+                text-indent 0
     .pic
         img
             display block
@@ -445,6 +499,7 @@
                 margin 0 auto
             @media(max-width 767px)
                 width 70%
+                min-width 200px
     .content
         height 450px
         font-size 0
@@ -457,7 +512,6 @@
         @media(max-width 991px)
             height auto 
             padding 50px 0
-        @media(max-width 767px)
             border-top none
         .vam>*
             width 90%
@@ -528,10 +582,33 @@
         line-height 30px
         text-align center
     p
+        position relative
         font-size 14px
         color #999999
         line-height 20px
         text-align center
+        height 60px
+        overflow hidden
+        transition 0.3s
+        text-align justify
+        &.more
+            &.active
+                height auto
+                span
+                    transform rotate(180deg)
+            span
+                position absolute
+                right 0
+                bottom 0
+                width 28px
+                font-weight bold
+                text-align center
+                height 20px
+                background #fbfbfb
+                color #ac915b
+                cursor pointer
+                transition 0.3s
+                font-size 16px
     a
         display block
         width 100px
@@ -564,5 +641,309 @@
             background-size 80% auto
         &:hover
             border-color #ac915b
-            
+
+.main-nav
+    .nav
+        padding 20px 0
+        font-size 14px
+        color #999999
+        line-height 40px
+        a
+        span
+            color #333333
+
+.main-news
+    .type-container
+        padding 15px 0
+        border-bottom 1px solid #eaeaea
+        a
+            position relative
+            transition 0.3s
+            margin 0 10px
+            line-height 30px
+            font-size 20px
+            color #666666
+            display inline-block
+            &:after
+                content ''
+                position absolute
+                bottom -16px
+                left 0
+                right 0
+                height 4px
+                background rgba(0,0,0,0)
+                transition 0.3s
+            &:hover
+            &.active
+                color #ac915b
+                &:after
+                    background #ac915b
+    .list
+        padding-top 10px
+        .item
+            padding 30px 0
+            width 100%
+            border-bottom 1px solid #eeeeee
+            @media(max-width 992px)
+                width 50%
+                box-sizing border-box
+                &:nth-child(even)
+                    padding-left 7px
+                &:nth-child(odd)
+                    padding-right 7px
+            @media(max-width 767px)
+                width 100%
+                &:nth-child(even)
+                &:nth-child(odd)
+                    padding 30px 0
+        .pic
+        .content
+            height 195px
+            // @media(max-width 992px)
+            //     height auto
+        .pic
+            width 260px
+            @media(max-width 992px)
+                width 100%
+                margin 0 auto
+                height auto
+            img
+                width 100%
+                display block
+        .content
+            position relative
+            width 800px
+            width calc(100% - 260px)
+            box-sizing border-box
+            padding-left 40px
+            @media(max-width 992px)
+                width 100%
+                padding-left 0
+                height auto
+            @media(max-width 767px)
+                height auto
+            h3
+                font-size 24px
+                color #353535
+                line-height 60px
+                white-space nowrap
+                text-overflow ellipsis
+                overflow hidden
+            p
+                padding-top 5px
+                font-size 14px
+                line-height 22px
+                color #666666
+            .option
+                position absolute
+                bottom 0
+                left 40px
+                font-size 12px
+                color #999999
+                line-height 20px
+                @media(max-width 992px)
+                    padding 10px 0
+                    position static
+                    overflow hidden
+                &>div
+                    padding-right 20px
+                .zan
+                    padding-left 20px
+                    background url('../img/68a7b1407336f4a6130cf20fc6544724-15+17.png') left center no-repeat
+    .more-load
+        padding 60px 0 150px
+        a
+            display block
+            margin 0 auto
+            maxw-width 300px
+            width 80%
+            height 45px
+            font-size 16px
+            color #ff7300
+            text-align center
+            line-height 45px
+            border 1px solid #ff7300
+
+.main-news-details
+    padding-bottom 120px
+    h3
+        padding 35px 0
+        font-size 38px
+        color #353535
+        line-height 48px
+        text-align center
+        border-bottom 1px solid #eaeaea
+    .date
+        padding 25px 0 40px
+        line-height 1
+        font-size 14px
+        color #bbbbbb
+        text-align center
+    p
+        padding 30px 60px 0
+        font-size 18px
+        color #4d4f53
+        line-height 32px
+        padding-top 30px
+        text-indent 2em
+        @media(max-width 767px)
+            padding 30px 0 0
+    .pic
+        padding-top 30px
+        img
+            display block
+            max-width 600px
+            width 100%
+            margin 0 auto
+
+.main-product-server
+    .review-mechanism
+        background #fbfbfb
+        padding 50px 0 0 50px
+        height 260px
+        box-sizing border-box
+        @media(max-width 1199px)
+            padding 50px 0
+            height auto
+        .pic
+            width 110px
+            height 110px
+            box-sizing border-box
+            background #1f2741 url('') center center no-repeat
+            border 6px solid #ac915b
+            border-radius 50%
+            @media(max-width 1199px)
+                margin 0 auto
+                float none
+        .content
+            max-width 330px
+            padding-left 30px
+            @media(max-width 1199px)
+                padding-left 0
+                max-width 70%
+                float none
+                margin 0 auto
+                text-align center
+            h3
+                padding 15px 0 25px
+                font-size 18px
+                color #1f2741
+            p
+                font-size 14px
+                color #999999
+                line-height 24px
+    .levels
+        text-align center
+        .fz0
+            font-size 0
+        .item
+            display inline-block
+            max-width 400px
+            width 100% 
+            height 120px
+            margin-bottom 5px
+            vertical-align middle
+            @media(max-width 992px)
+                height auto
+        .bgrgba
+            background linear-gradient(30deg,#ffffff,#f8f5f0,#f7f4ee)
+        .bge6decd
+            background #e6decd
+        .bgdacdb5
+            background #dacdb5
+        .bgcdbd9d
+            background #cdbd9d
+        ul
+            padding-top 20px
+            @media(max-width 992px)
+                padding 20px 0
+            li
+                text-align left
+                display inline-block
+                width 50%
+                font-size 14px
+                color #333333
+                line-height 28px
+                padding-left 70px
+                box-sizing border-box
+                @media(max-width 767px)
+                    padding-left 0
+                    text-align center
+        h3
+            font-size 22px
+            color #333333
+            line-height 120px
+            text-indent 50px
+            text-align left
+            @media(max-width 992px)
+                line-height 2
+                text-align center
+                text-indent 0
+    .management-process
+        .tips
+            &.c999
+                color #999999
+            font-size 16px
+            color #9b7f47
+            text-align center
+            line-height 24px
+            text-align center
+        h3
+            padding 60px 0 10px
+            font-size 20px
+            color #333333
+            text-align center
+    .management-process-steps
+        background linear-gradient(to right,#ffffff ,#fedad9 10%,#fedad9 90%,#fff) center 110px/1200px 2px no-repeat
+        @media(max-width 991px)
+            background-size 90% 2px
+            background-position center 110px,center 246px
+            background-image linear-gradient(to right,#ffffff ,#fedad9 10%,#fedad9 90%,#fff),linear-gradient(to right,#ffffff ,#fedad9 10%,#fedad9 90%,#fff)
+        &.pt40
+            padding-top 40px
+        .item-wrap
+            width 100%    
+            .item
+                width 12.5%
+                text-align center
+                @media(max-width 991px)
+                    width 25%
+                    &:nth-child(n+5)
+                        margin-top 20px
+                .step
+                    font-size 22px
+                    color #9b7f47
+                    text-align center
+                .en
+                    padding 4px 0 13px
+                    font-size 12px
+                    text-transform uppercase
+                    color rgba(#9b7f47,0.3)
+                .round
+                    width 12px
+                    height 12px
+                    background #9b7f47
+                    border-radius 50%
+                    box-shadow 0 0 0 3px rgba(#e69486,0.4)
+                    margin 0 auto
+                h4
+                    padding-top 23px
+                    line-height 1
+                    font-size 16px
+                    color #333333
+                    @media(max-width 500px)
+                        font-size 14px
+    .management-process
+        .pic
+            padding 30px 0 100px
+            img
+                display block
+                max-width 450px
+                width 100%
+                margin 0 auto
+    
+
+
+
         
+            

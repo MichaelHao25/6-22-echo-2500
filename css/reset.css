@@ -13,7 +13,7 @@ img{border:none; vertical-align:top;}
 
 /* 基本属性
 ---------------------------------------------------------------------------------------------------------------------- */
-body{background:#fff;color:#636363;font-family:'microsoft yahei',Arial;}
+body{background:#fff;color:#636363;font-family:Arial,'microsoft yahei';}
 
 
 /*.f12_sa, .f12_sa a:link, .f12_sa a:visited{ font-size:12px;}*/
