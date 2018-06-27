@@ -856,9 +856,11 @@
   color: #999;
   line-height: 40px;
 }
-.main-nav .nav a,
-.main-nav .nav span {
+.main-nav .nav a {
   color: #333;
+}
+.main-nav .nav span {
+  color: #ac915b;
 }
 .main-news .type-container {
   padding: 15px 0;
