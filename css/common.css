@@ -1604,6 +1604,7 @@
   width: 20%;
   height: 50px;
 }
+
 .main-friend .item:hover a {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
@@ -1616,6 +1617,14 @@
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   transition: 0.3s;
+}
+@media (max-width: 991px){
+  .main-friend .item {
+    width: 33.33%;
+  }
+  .main-friend .item a{
+    background-size: 80% auto;
+  }
 }
 .main-boss {
   max-width: 1560px;
@@ -2648,4 +2657,3 @@
   }
 }
 
-/*# sourceMappingURL=common.css.map */
