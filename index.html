@@ -107,9 +107,19 @@
 						</div>
 						<div class="clear fl">
 							<div class="login-other fl">
-								<a href="#" class="wechat iconfont icon-wechat"></a>
+								<a href="#" class="wechat iconfont icon-wechat">
+									<div class="layout">
+										<div class="w50">
+											<div class="pic">
+												<img src="img/a9ab724de789d346646faac30ce04c6f-150+150.png" alt="">
+											</div>
+											<div class="name">订阅号</div>
+										</div>
+									</div>
+								</a>
 								<a href="#" class="weibo iconfont icon-weibo"></a>
-								<a href="#" class="tel iconfont icon-tel"></a>
+								<a href="#" class="tel iconfont icon-tel active"></a>
+								<a href="#" class="tel-number">021-6836 7751</a>
 								<i></i>
 							</div>
 							<div class="login-register fl">
@@ -323,12 +333,15 @@
 							<span>邮编：200120</span>
 						</p>
 						<p>
-							<span>电话：021 <span> - </span>6859 0057</span>
+							<span>电话：021
+								<span> - </span>6859 0057</span>
 						</p>
 						<p class="pt0">
-							 <span><a href="mailto:email@jinyonginvestment.com">email@jinyonginvestment.com</a></span>
+							<span>
+								<a href="mailto:email@jinyonginvestment.com">email@jinyonginvestment.com</a>
+							</span>
 						</p>
-						<p class="copy-right">Copyright ©️ 2018 上海锦涌投资管理有限公司  沪ICP备18024968号-1</p>
+						<p class="copy-right">Copyright ©️ 2018 上海锦涌投资管理有限公司 沪ICP备18024968号-1</p>
 					</div>
 				</div>
 			</div>
@@ -630,6 +643,21 @@
 			$('.pof-layout .center').hide();
 			$('.pof-layout').fadeIn()
 			$('.pof-layout .data6-29').fadeIn()
+		})
+
+
+
+		$('.public-header .menu .login-other a.wechat').on('mouseenter', function () {
+			$(this).children('.layout').fadeIn();
+		}).on('mouseleave', function () {
+			$(this).children('.layout').hide();
+		})
+
+		$('.public-header .menu .login-other a.tel').on('click', function () {
+			if (window.innerWidth <= 768) {
+				$('.public-header .menu .login-other').toggleClass('active');
+				$('.public-header .menu .login-other a.tel-number').toggle();
+			}
 		})
 	</script>
 </body>
