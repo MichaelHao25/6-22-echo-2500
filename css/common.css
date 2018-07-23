@@ -52,10 +52,7 @@
     position: relative;
     width: 100%;
     padding: 20px 0 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: block;
     height: auto;
   }
 }
@@ -274,6 +271,8 @@
   .public-header .menu .login-other {
     padding-left: 0;
     padding-right: 30px;
+    float: none;
+    text-align: center;
     padding: 0;
   }
 }
@@ -404,9 +403,15 @@
   }
 }
 
+
 .public-header .menu .login-other a:hover,
 .public-header .menu .login-other a.active {
   background: #ac915b;
+}
+@media (min-width:768px){
+  .public-header .menu .login-other a.tel{
+    background: #ac915b;
+  }
 }
 
 .public-header .menu .login-register {
@@ -421,6 +426,8 @@
   .public-header .menu .login-register {
     margin-left: 0;
     margin-top: 20px;
+    float: none;
+    text-align: center;
   }
 }
 
@@ -589,6 +596,14 @@
 .public-footer .about p.copy-right {
   padding-top: 20px;
   color: #666;
+}
+@media (max-width:767px){
+  .public-footer .about p.copy-right span{
+    display: block;
+  }
+  .public-footer .about p.copy-right span+span{
+    padding-left: 0;
+  }
 }
 
 .public-footer .about p.pt0 {
@@ -1414,7 +1429,7 @@
 }
 
 .main-product-server .review-mechanism .content p {
-  font-size: 14px;
+  font-size: 13px;
   color: #999;
   line-height: 24px;
 }
@@ -1503,7 +1518,7 @@
 }
 
 .main-product-server .management-process .tips {
-  font-size: 16px;
+  font-size: 15px;
   color: #9b7f47;
   text-align: center;
   line-height: 24px;
